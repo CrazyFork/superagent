@@ -6,18 +6,19 @@ notation explained:
 
 dependencies explained:
 
-  "qs": "^6.1.0",
-  "formidable": "^1.0.17",
-  "mime": "^1.3.4", //Comprehensive MIME type mapping API based on mime-db module
-  "component-emitter": "^1.2.0",
-  "methods": "^1.1.1",// provide http method ext?
-  "cookiejar": "^2.0.6",
-  "debug": "^2.2.0", // tiny node.js debugging utility modelled after node core's debugging technique.
-  "extend": "^3.0.0",
-  "form-data": "1.0.0-rc4", //用来创建http form 表单数据, 和提交的
-  // Streams3, a user-land copy of the stream library from Node.js
-  // 浏览器端的 node stream 实现
-  "readable-stream": "^2.0.5"  
+    "qs": "^6.1.0",                 // A querystring parser that supports nesting and arrays, with a depth limit
+    "formidable": "^1.0.17",        // A node.js module for parsing form data, especially file uploads.
+    "mime": "^1.3.4",               // Comprehensive MIME type mapping API based on mime-db module
+    "component-emitter": "^1.2.0",  // ! a tiny pub/sub pattern lib. 
+    "methods": "^1.1.1",            // provide http method ext?
+    "cookiejar": "^2.0.6",
+    "debug": "^2.2.0",              // tiny node.js debugging utility modelled after node core's debugging technique.
+    "extend": "^3.0.0",             // node-extend is a port of the classic extend() method from jQuery. It behaves as you expect. It is simple, tried and true.
+    "form-data": "1.0.0-rc4",       //用来创建http form 表单数据, 和提交的
+    // Streams3, a user-land copy of the stream library from Node.js
+    // 浏览器端的 node stream 实现
+    "readable-stream": "^2.0.5"  
+
 
 
 
@@ -26,12 +27,31 @@ links:
     http://www.sandersdenardi.com/readable-writable-transform-streams-node/
     https://github.com/substack/stream-handbook
 
+## code snippets
+
+
+    //  PassThrough usage case 
+    //      @ /lib/node/part.js
+
+  
+    // create buffer from array
+    //    @ /lib/node/parsers/image.js
+
+    fn(null, Buffer.concat(data));
+
+
+
+
 
 todos:
 
   pending:
     draw a mind-map
     revisit EventEmeter
+    add overview description on top of each file
+    stream pause & resume
+
+
 
 
 
